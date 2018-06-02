@@ -8,7 +8,7 @@ fun helloWorld() : String {
 }
 
 //함수 표현식
-fun helloWorldExpression() = "Hollo World"
+fun helloWorldExpression() = "Hello World"
 
 fun main(args : Array<String>) : Unit {
     println(helloWorld())

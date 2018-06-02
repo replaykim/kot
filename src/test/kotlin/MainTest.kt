@@ -10,4 +10,10 @@ class HelloTest{
         val string = main.helloWorld()
         assertEquals("Hello World!!!", string)
     }
+
+    @Test
+    fun helloWorldExTest() {
+        val string = main.helloWorldExpression()
+        assertEquals("Hello World", string)
+    }
 }
