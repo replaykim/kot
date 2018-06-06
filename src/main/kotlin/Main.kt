@@ -4,6 +4,13 @@ package main
 
 //함수 정의
 fun helloWorld() : String {
+    val hello : String = "Hello World!!!"
+    var helloVar = "hello World!!!"
+
+//    hello = "Hello" //컴파일 에러!
+    helloVar = "Hello"
+    println(helloVar)
+
     return "Hello World!!!"
 }
 
