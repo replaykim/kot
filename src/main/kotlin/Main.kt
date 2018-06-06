@@ -9,7 +9,8 @@ fun helloWorld() : String {
 
 //    hello = "Hello" //컴파일 에러!
     helloVar = "Hello"
-    println(helloVar)
+
+    println("${hello} JH!")
 
     return "Hello World!!!"
 }
