@@ -24,7 +24,17 @@ fun helloWorld() : String {
 //함수 표현식
 fun helloWorldExpression() = "Hello World"
 
+fun autoCasting(obj : Any) : Int {
+    if (obj is String) {
+        return obj.length;
+    }
+    return 0;
+}
+
 fun main(args : Array<String>) : Unit {
-    println(helloWorld())
-    println(helloWorldExpression())
+    println(autoCasting("Hello"))
+    println(autoCasting(123))
+
+//    println(helloWorld())
+//    println(helloWorldExpression())
 }
