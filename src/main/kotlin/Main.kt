@@ -46,8 +46,23 @@ fun forEach() {
     }
 }
 
+//when case
+fun whenExpression(obj : Any) {
+    when(obj) {
+        in 0..1000 -> println(obj)
+        is String -> println("String" + obj)
+        else -> {
+            println("no matching")
+        }
+    }
+
+}
+
 fun main(args : Array<String>) : Unit {
-    forEach();
+    whenExpression(123)
+    whenExpression("12345 abc")
+
+//    forEach();
 
 //    println(autoCasting("Hello"))
 //    println(autoCasting(123))
