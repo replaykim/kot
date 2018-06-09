@@ -31,9 +31,26 @@ fun autoCasting(obj : Any) : Int {
     return 0;
 }
 
+//itetrator
+fun forEach() {
+    val numbers = listOf(1,2,3,4,5,6)
+
+    for (number in numbers) {
+        println(number + 100)
+        println("$number")
+    }
+
+    for (i in numbers.indices) {
+        println(i)
+        println("${numbers[i]}")
+    }
+}
+
 fun main(args : Array<String>) : Unit {
-    println(autoCasting("Hello"))
-    println(autoCasting(123))
+    forEach();
+
+//    println(autoCasting("Hello"))
+//    println(autoCasting(123))
 
 //    println(helloWorld())
 //    println(helloWorldExpression())
