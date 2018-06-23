@@ -1,5 +1,7 @@
 package main
 
+import java.sql.DriverManager
+import java.sql.ResultSet
 
 
 //함수 정의
@@ -58,9 +60,29 @@ fun whenExpression(obj : Any) {
 
 }
 
+fun connectionTest() {
+    val connector = "com.mysql.jdbc.Driver"
+    val dbURL = "jdbc:mysql://localhost:3306/test"
+
+    Class.forName(connector)
+    val con = DriverManager.getConnection(dbURL, "root", "")
+
+    val statement = con.createStatement()
+
+    val result : ResultSet = statement.executeQuery("SELECT * FROM test")
+
+    while (result.next()) {
+        println(result.getString(1))
+    }
+
+
+}
+
 fun main(args : Array<String>) : Unit {
-    whenExpression(123)
-    whenExpression("12345 abc")
+
+    connectionTest()
+//    whenExpression(123)
+//    whenExpression("12345 abc")
 
 //    forEach();
 
